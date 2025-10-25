@@ -11,46 +11,150 @@
       padding: 0;
       box-sizing: border-box;
     }
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyecto de Inteligencia Artificial - Universidad Latina de Panamá">
+  <title>IA-ULAT — Portafolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #06b6d4;
+      --secondary: #0891b2;
+      --accent: #67e8f9;
+      --dark: #1a1a2e;
+      --light: #f8f9fa;
+      --text: #2d3748;
+    }
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: var(--dark);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* Animated Background */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #67e8f9 100%);
+      background-size: 200% 200%;
+      animation: gradientShift 15s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .bg-animation::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      animation: float 20s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(26, 26, 46, 0.95);
+      backdrop-filter: blur(10px);
+      padding: 1rem 0;
+      z-index: 1000;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    }
+
+    nav .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: width 0.3s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
-      line-height: 1.6;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      padding-top: 80px;
     }
 
-    header {
-      background: rgba(0, 85, 170, 0.95);
-      color: white;
-      padding: 2rem 1rem;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      backdrop-filter: blur(10px);
+    .hero-content {
+      animation: fadeInUp 1s ease;
     }
 
-    header h1 {
-      font-size: 2.2em;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    main {
-      flex: 1;
-      margin: 2rem auto;
-      width: 90%;
-      max-width: 800px;
-      background: white;
-      padding: 2.5rem;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-      animation: fadeIn 0.6s ease-in;
-    }
-
-    @keyframes fadeIn {
+    @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
       }
       to {
         opacity: 1;
@@ -58,135 +162,423 @@
       }
     }
 
-    h2 {
-      color: #333;
-      font-size: 1.8em;
+    .hero .greeting {
+      font-size: 1.3em;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 0.5rem;
+      font-weight: 400;
+    }
+
+    .hero h1 {
+      font-size: 4.5em;
+      color: white;
       margin-bottom: 1rem;
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.1;
     }
 
-    main > p {
-      color: #555;
+    .hero .subtitle {
+      font-size: 1.5em;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
+
+    .hero .description {
+      max-width: 700px;
+      margin: 0 auto 2rem;
       font-size: 1.1em;
-      margin-bottom: 2rem;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.7;
     }
 
-    .tareas-list {
-      list-style: none;
-      padding: 0;
+    .hero .highlight {
+      background: linear-gradient(135deg, var(--accent), white);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .tareas-list li {
-      margin: 1rem 0;
-      transition: transform 0.3s ease;
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background: white;
+      color: var(--dark);
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1em;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      transition: all 0.3s ease;
+      margin-top: 1rem;
     }
 
-    .tareas-list li:hover {
-      transform: translateX(10px);
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.4);
     }
 
-    .tareas-list a {
-      display: flex;
+    /* Projects Section */
+    .projects {
+      min-height: 100vh;
+      padding: 6rem 2rem;
+      background: rgba(255,255,255,0.95);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-size: 3em;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--dark);
+      font-weight: 800;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 1.2em;
+      color: #666;
+      margin-bottom: 4rem;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+    }
+
+    .project-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(102, 126, 234, 0.3);
+    }
+
+    .project-icon {
+      font-size: 3em;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .project-title {
+      font-size: 1.5em;
+      color: var(--dark);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+
+    .project-description {
+      color: #666;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .project-link {
+      display: inline-flex;
       align-items: center;
-      gap: 1rem;
-      padding: 1.2rem;
-      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-      border-radius: 12px;
-      color: #0055aa;
+      gap: 0.5rem;
+      color: var(--primary);
       text-decoration: none;
       font-weight: 600;
-      font-size: 1.05em;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: gap 0.3s ease;
+    }
+
+    .project-link:hover {
+      gap: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .footer-title {
+      font-size: 2em;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 2rem 0;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5em;
       transition: all 0.3s ease;
     }
 
-    .tareas-list a:hover {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      color: white;
-      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-      transform: scale(1.02);
+    .footer-links a:hover {
+      transform: scale(1.2);
+      color: var(--accent);
     }
 
-    .icon {
-      font-size: 1.5em;
-      min-width: 30px;
-      text-align: center;
+    .copyright {
+      margin-top: 2rem;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9em;
     }
 
-    footer {
-      background: rgba(0, 0, 0, 0.1);
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 0.95em;
-      backdrop-filter: blur(10px);
-    }
-
-    strong {
-      color: #0055aa;
-    }
-
-    /* Responsividad */
+    /* Responsive */
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.6em;
+      .hero .greeting {
+        font-size: 1em;
       }
 
-      main {
-        width: 95%;
-        padding: 1.5rem;
+      .hero h1 {
+        font-size: 2.5em;
       }
 
-      h2 {
-        font-size: 1.5em;
+      .hero .subtitle {
+        font-size: 1.2em;
       }
 
-      .tareas-list a {
-        font-size: 0.95em;
-        padding: 1rem;
+      .hero .description {
+        font-size: 1em;
+        padding: 0 1rem;
+      }
+
+      .section-title {
+        font-size: 2em;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-5px);
+      }
+    }
+
+    .scroll-indicator span {
+      display: block;
+      width: 30px;
+      height: 50px;
+      border: 2px solid white;
+      border-radius: 25px;
+      position: relative;
+    }
+
+    .scroll-indicator span::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      width: 6px;
+      height: 6px;
+      background: white;
+      border-radius: 50%;
+      transform: translateX(-50%);
+      animation: scrollDown 2s infinite;
+    }
+
+    @keyframes scrollDown {
+      0% {
+        top: 8px;
+        opacity: 1;
+      }
+      100% {
+        top: 30px;
+        opacity: 0;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🎓 IA-ULAT — Página del Proyecto</h1>
-  </header>
+  <div class="bg-animation"></div>
 
-  <main>
-    <h2>Bienvenido 👋</h2>
-    <p>Este sitio forma parte del curso de <strong>Inteligencia Artificial</strong> de la ULAT.</p>
-    
-    <ul class="tareas-list">
-      <li>
-        <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea1_GithubOverview">
-          <span class="icon">📘</span>
-          <span>Tarea 1 - Repositorio y Overview</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea2_Clasificacion">
-          <span class="icon">🧠</span>
-          <span>Tarea 2 - Clasificación Binaria</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea2_Regresion">
-          <span class="icon">📊</span>
-          <span>Tarea 2 - Regresión</span>
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Laboratorio1_WebPage">
-          <span class="icon">🧪</span>
-          <span>Laboratorio 1 - WebPage</span>
-        </a>
-      </li>
-    </ul>
-  </main>
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">IA-ULAT</a>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
 
-  <footer>
-    © 2025 Josué M. — ULAT | Inteligencia Artificial
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <p class="greeting">Estudiante de Ingeniería Biomédica</p>
+      <h1>Hola, soy <span class="highlight">Josué Miranda.</span></h1>
+      <p class="subtitle">Combino ciencia, tecnología e innovación.</p>
+      <p class="description">
+        Soy estudiante de Ingeniería Biomédica en la Universidad Latina de Panamá, 
+        con interés en la aplicación de Inteligencia Artificial al área de la salud. 
+        Me apasiona el desarrollo de soluciones tecnológicas que integren machine learning, 
+        análisis de datos y dispositivos médicos para mejorar la calidad de vida de las personas. 
+        Actualmente explorando clasificación, regresión y otras técnicas de IA aplicadas.
+      </p>
+      <a href="#proyectos" class="cta-button">Ver Proyectos →</a>
+      <div class="scroll-indicator">
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="proyectos">
+    <div class="container">
+      <h2 class="section-title">Proyectos y Trabajos</h2>
+      <p class="section-subtitle">Repositorio de tareas y laboratorios del curso de IA</p>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <span class="project-icon">📘</span>
+          <h3 class="project-title">Repositorio & Overview</h3>
+          <p class="project-description">
+            Configuración inicial del repositorio GitHub y documentación general del proyecto de Inteligencia Artificial.
+          </p>
+          <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea1_GithubOverview" class="project-link" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+
+        <div class="project-card">
+          <span class="project-icon">🧠</span>
+          <h3 class="project-title">Clasificación Binaria</h3>
+          <p class="project-description">
+            Implementación de algoritmos de clasificación binaria utilizando machine learning y análisis de datos.
+          </p>
+          <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea2_Clasificacion" class="project-link" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+
+        <div class="project-card">
+          <span class="project-icon">📊</span>
+          <h3 class="project-title">Regresión</h3>
+          <p class="project-description">
+            Modelos de regresión para predicción de valores continuos y análisis estadístico de datos.
+          </p>
+          <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea2_Regresion" class="project-link" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+
+        <div class="project-card">
+          <span class="project-icon">🧪</span>
+          <h3 class="project-title">WebPage Lab</h3>
+          <p class="project-description">
+            Desarrollo de página web para presentación del portafolio de proyectos de IA.
+          </p>
+          <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Laboratorio1_WebPage" class="project-link" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto">
+    <div class="footer-content">
+      <h3 class="footer-title">Josué Miranda</h3>
+      <p>Estudiante de Ingeniería Biomédica</p>
+      <p>Universidad Latina de Panamá</p>
+      <div class="footer-links">
+        <a href="https://github.com/JosueM028/IA-ULAT" target="_blank" title="GitHub">📁</a>
+        <a href="#inicio" title="Volver arriba">⬆️</a>
+      </div>
+      <p class="copyright">© 2025 Josué Miranda</p>
+    </div>
   </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 0.8s ease forwards';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.project-card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
-
