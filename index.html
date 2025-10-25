@@ -3,49 +3,189 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyecto de Inteligencia Artificial - Universidad Latina de Panamá">
   <title>IA-ULAT — Página Web</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+    * {
       margin: 0;
-      text-align: center;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+
     header {
-      background: #0055aa;
+      background: rgba(0, 85, 170, 0.95);
       color: white;
-      padding: 1rem;
-      font-size: 1.8em;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
     }
+
+    header h1 {
+      font-size: 2.2em;
+      font-weight: 600;
+      margin: 0;
+    }
+
     main {
+      flex: 1;
       margin: 2rem auto;
-      width: 80%;
+      width: 90%;
+      max-width: 800px;
       background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2.5rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      animation: fadeIn 0.6s ease-in;
     }
-    a {
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: #333;
+      font-size: 1.8em;
+      margin-bottom: 1rem;
+    }
+
+    main > p {
+      color: #555;
+      font-size: 1.1em;
+      margin-bottom: 2rem;
+    }
+
+    .tareas-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .tareas-list li {
+      margin: 1rem 0;
+      transition: transform 0.3s ease;
+    }
+
+    .tareas-list li:hover {
+      transform: translateX(10px);
+    }
+
+    .tareas-list a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      border-radius: 12px;
       color: #0055aa;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      font-size: 1.05em;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+    }
+
+    .tareas-list a:hover {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+      transform: scale(1.02);
+    }
+
+    .icon {
+      font-size: 1.5em;
+      min-width: 30px;
+      text-align: center;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.1);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.95em;
+      backdrop-filter: blur(10px);
+    }
+
+    strong {
+      color: #0055aa;
+    }
+
+    /* Responsividad */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.6em;
+      }
+
+      main {
+        width: 95%;
+        padding: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      .tareas-list a {
+        font-size: 0.95em;
+        padding: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <header>IA-ULAT — Página del Proyecto</header>
+  <header>
+    <h1>🎓 IA-ULAT — Página del Proyecto</h1>
+  </header>
+
   <main>
     <h2>Bienvenido 👋</h2>
     <p>Este sitio forma parte del curso de <strong>Inteligencia Artificial</strong> de la ULAT.</p>
-    <ul style="list-style:none;">
-      <li>📘 <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea1_GithubOverview">Tarea 1 - Repositorio y Overview</a></li>
-      <li>🧠 <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea2_Clasificacion">Tarea 2 - Clasificación Binaria</a></li>
-      <li>📊 <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea2_Regresion">Tarea 2 - Regresión</a></li>
-      <li>🧪 <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Laboratorio1_WebPage">Laboratorio 1 - WebPage</a></li>
+    
+    <ul class="tareas-list">
+      <li>
+        <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea1_GithubOverview">
+          <span class="icon">📘</span>
+          <span>Tarea 1 - Repositorio y Overview</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea2_Clasificacion">
+          <span class="icon">🧠</span>
+          <span>Tarea 2 - Clasificación Binaria</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea2_Regresion">
+          <span class="icon">📊</span>
+          <span>Tarea 2 - Regresión</span>
+        </a>
+      </li>
+      <li>
+        <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Laboratorio1_WebPage">
+          <span class="icon">🧪</span>
+          <span>Laboratorio 1 - WebPage</span>
+        </a>
+      </li>
     </ul>
   </main>
-  <footer style="margin-top:2rem; color:#555;">
-    © 2025 Josué M. — ULAT
+
+  <footer>
+    © 2025 Josué M. — ULAT | Inteligencia Artificial
   </footer>
 </body>
 </html>
