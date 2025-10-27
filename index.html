@@ -4,19 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Proyecto de Inteligencia Artificial - Universidad Latina de Panamá">
-  <title>IA-ULAT — Página Web</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Proyecto de Inteligencia Artificial - Universidad Latina de Panamá">
   <title>IA-ULAT — Portafolio</title>
   <style>
     * {
@@ -488,45 +475,45 @@
       
       <div class="projects-grid">
         <div class="project-card">
-          <span class="project-icon">📘</span>
-          <h3 class="project-title">Repositorio & Overview</h3>
+          <span class="project-icon">😴</span>
+          <h3 class="project-title">Análisis de Datos - Clasificación Binaria</h3>
           <p class="project-description">
-            Configuración inicial del repositorio GitHub y documentación general del proyecto de Inteligencia Artificial.
+            Análisis exploratorio completo del dataset de patrones de sueño y estilo de vida. Incluye exploración inicial, análisis univariante y bivariante, filtrado de outliers, creación de variable objetivo binaria (nivel de estrés), matriz de correlación y división estratificada en conjuntos de entrenamiento y prueba (80/20).
           </p>
-          <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea1_GithubOverview" class="project-link" target="_blank">
+          <a href="https://github.com/JosueM028/IA/tree/main/Proyecto_Sueno" class="project-link" target="_blank">
             Ver proyecto →
           </a>
         </div>
 
         <div class="project-card">
           <span class="project-icon">🧠</span>
-          <h3 class="project-title">Clasificación Binaria</h3>
+          <h3 class="project-title">Modelado de Datos - Clasificación Binaria</h3>
           <p class="project-description">
-            Implementación de algoritmos de clasificación binaria utilizando machine learning y análisis de datos.
+            Desarrollo e implementación de modelos de machine learning (Logistic Regression y al menos 3 más) para clasificación del nivel de estrés. Evaluación con métricas: Precision, Recall, F1-Score, Sensitivity, Specificity y matriz de confusión. Incluye análisis de error y UI interactiva con Gradio/Streamlit.
           </p>
-          <a href="Proyecto_Sueno" class="project-link" target="_blank">
+          <a href="https://github.com/JosueM028/IA/tree/main/Proyecto_Sueno" class="project-link" target="_blank">
+            Ver proyecto →
+          </a>
+        </div>
+
+        <div class="project-card">
+          <span class="project-icon">🏥</span>
+          <h3 class="project-title">Análisis de Datos - Regresión</h3>
+          <p class="project-description">
+            Análisis exploratorio exhaustivo del dataset de costos de seguro médico. Comprende exploración de datos, tratamiento de valores faltantes, análisis univariante y bivariante de variables, filtrado de outliers mediante intercuartiles, matriz de correlación y división estratificada del dataset (80/20).
+          </p>
+          <a href="https://github.com/JosueM028/IA/tree/main/Proyecto_Seg" class="project-link" target="_blank">
             Ver proyecto →
           </a>
         </div>
 
         <div class="project-card">
           <span class="project-icon">📊</span>
-          <h3 class="project-title">Regresión</h3>
+          <h3 class="project-title">Modelado de Datos - Regresión</h3>
           <p class="project-description">
-            Modelos de regresión para predicción de valores continuos y análisis estadístico de datos.
+            Implementación de modelos de regresión (Linear Regression como base y al menos 3 adicionales) para predicción de costos de seguro médico. Evaluación mediante métricas MAPE, MSE y RMSE. Incluye comparación de modelos, selección del mejor según métricas definidas, análisis de error y UI interactiva.
           </p>
-          <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Tarea2_Regresion" class="project-link" target="_blank">
-            Ver proyecto →
-          </a>
-        </div>
-
-        <div class="project-card">
-          <span class="project-icon">🧪</span>
-          <h3 class="project-title">WebPage Lab</h3>
-          <p class="project-description">
-            Desarrollo de página web para presentación del portafolio de proyectos de IA.
-          </p>
-          <a href="https://github.com/JosueM028/IA-ULAT/tree/main/Laboratorio1_WebPage" class="project-link" target="_blank">
+          <a href="https://github.com/JosueM028/IA/tree/main/Proyecto_Seg" class="project-link" target="_blank">
             Ver proyecto →
           </a>
         </div>
@@ -540,7 +527,7 @@
       <p>Estudiante de Ingeniería Biomédica</p>
       <p>Universidad Latina de Panamá</p>
       <div class="footer-links">
-        <a href="https://github.com/JosueM028/IA-ULAT" target="_blank" title="GitHub">📁</a>
+        <a href="https://github.com/JosueM028/IA" target="_blank" title="GitHub">📁</a>
         <a href="#inicio" title="Volver arriba">⬆️</a>
       </div>
       <p class="copyright">© 2025 Josué Miranda</p>
@@ -579,6 +566,9 @@
     document.querySelectorAll('.project-card').forEach(card => {
       observer.observe(card);
     });
+  </script>
+</body>
+</html>
   </script>
 </body>
 </html>
