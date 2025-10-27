@@ -1,0 +1,73 @@
+Gender,Age,Occupation,Sleep Duration,Quality of Sleep,Physical Activity Level,BMI Category,Blood Pressure,Heart Rate,Daily Steps,Sleep Disorder,Stress_Category
+Male,28,Doctor,6.2,6,60,Normal,125/80,75,10000,None,ESTRESADO
+Female,53,Engineer,8.4,9,30,Normal,125/80,65,5000,None,ESTRES_MODERADO
+Male,32,Accountant,7.2,8,50,Normal Weight,118/76,68,7000,None,ESTRES_MODERADO
+Female,59,Nurse,8.1,9,75,Overweight,140/95,68,7000,None,ESTRES_MODERADO
+Male,29,Doctor,6.1,6,30,Normal,120/80,70,8000,None,ESTRESADO
+Male,31,Doctor,7.7,7,75,Normal,120/80,70,8000,None,ESTRES_MODERADO
+Female,53,Engineer,8.3,9,30,Normal,125/80,65,5000,None,ESTRES_MODERADO
+Female,59,Nurse,8.1,9,75,Overweight,140/95,68,7000,Sleep Apnea,ESTRES_MODERADO
+Male,41,Lawyer,7.7,8,90,Normal,130/85,70,8000,None,ESTRES_MODERADO
+Female,56,Doctor,8.2,9,90,Normal Weight,118/75,65,10000,None,ESTRES_MODERADO
+Male,43,Engineer,7.8,8,90,Normal,130/85,70,8000,None,ESTRES_MODERADO
+Male,31,Doctor,7.8,7,75,Normal,120/80,70,8000,None,ESTRES_MODERADO
+Female,39,Accountant,8.0,9,80,Normal Weight,115/78,67,7500,None,ESTRES_MODERADO
+Male,32,Engineer,7.5,8,45,Normal,120/80,70,8000,None,ESTRES_MODERADO
+Female,51,Nurse,6.0,6,90,Overweight,140/95,75,10000,Sleep Apnea,ESTRESADO
+Male,30,Doctor,7.9,7,75,Normal,120/80,70,8000,None,ESTRES_MODERADO
+Male,42,Lawyer,7.8,8,90,Normal,130/85,70,8000,None,ESTRES_MODERADO
+Male,38,Lawyer,7.3,8,60,Normal,130/85,68,8000,None,ESTRES_MODERADO
+Male,27,Software Engineer,6.1,6,42,Overweight,126/83,77,4200,None,ESTRES_MODERADO
+Male,43,Salesperson,6.5,6,45,Overweight,130/85,72,6000,Insomnia,ESTRESADO
+Female,58,Nurse,8.0,9,75,Overweight,140/95,68,7000,Sleep Apnea,ESTRES_MODERADO
+Male,37,Engineer,7.8,8,70,Normal Weight,120/80,68,7000,None,ESTRES_MODERADO
+Male,35,Software Engineer,7.5,8,60,Normal Weight,120/80,70,8000,None,ESTRES_MODERADO
+Male,35,Engineer,7.3,8,60,Normal,125/80,65,5000,None,ESTRES_MODERADO
+Male,35,Teacher,6.7,7,40,Overweight,128/84,70,5600,None,ESTRES_MODERADO
+Female,59,Nurse,8.1,9,75,Overweight,140/95,68,7000,Sleep Apnea,ESTRES_MODERADO
+Male,33,Doctor,6.0,6,30,Normal,125/80,72,5000,None,ESTRESADO
+Female,59,Nurse,8.0,9,75,Overweight,140/95,68,7000,Sleep Apnea,ESTRES_MODERADO
+Male,29,Doctor,7.8,7,75,Normal,120/80,70,8000,None,ESTRES_MODERADO
+Male,43,Engineer,6.9,6,47,Normal Weight,117/76,69,6800,None,ESTRESADO
+Male,32,Doctor,6.0,6,30,Normal,125/80,72,5000,None,ESTRESADO
+Female,52,Accountant,6.5,7,45,Overweight,130/85,72,6000,Insomnia,ESTRESADO
+Male,32,Doctor,6.2,6,30,Normal,125/80,72,5000,None,ESTRESADO
+Female,53,Engineer,8.4,9,30,Normal,125/80,65,5000,None,ESTRES_MODERADO
+Male,38,Lawyer,7.1,8,60,Normal,130/85,68,8000,None,ESTRES_MODERADO
+Female,45,Teacher,6.6,7,45,Overweight,135/90,65,6000,Insomnia,ESTRES_MODERADO
+Female,49,Nurse,6.2,6,90,Overweight,140/95,75,10000,Sleep Apnea,ESTRESADO
+Female,50,Nurse,6.0,6,90,Overweight,140/95,75,10000,Sleep Apnea,ESTRESADO
+Male,41,Lawyer,7.7,8,90,Normal,130/85,70,8000,None,ESTRES_MODERADO
+Female,50,Nurse,6.0,6,90,Overweight,140/95,75,10000,Sleep Apnea,ESTRESADO
+Male,44,Salesperson,6.4,6,45,Overweight,130/85,72,6000,None,ESTRESADO
+Female,54,Engineer,8.4,9,30,Normal,125/80,65,5000,None,ESTRES_MODERADO
+Female,57,Nurse,8.2,9,75,Overweight,140/95,68,7000,Sleep Apnea,ESTRES_MODERADO
+Male,43,Engineer,7.7,8,90,Normal,130/85,70,8000,None,ESTRES_MODERADO
+Female,54,Engineer,8.4,9,30,Normal,125/80,65,5000,None,ESTRES_MODERADO
+Female,39,Lawyer,6.9,7,50,Normal Weight,128/85,75,5500,None,ESTRES_MODERADO
+Female,55,Nurse,8.1,9,75,Overweight,140/95,72,5000,Sleep Apnea,ESTRES_MODERADO
+Male,39,Lawyer,7.2,8,60,Normal,130/85,68,8000,None,ESTRES_MODERADO
+Male,42,Lawyer,7.8,8,90,Normal,130/85,70,8000,None,ESTRES_MODERADO
+Male,30,Doctor,7.9,7,75,Normal,120/80,70,8000,None,ESTRES_MODERADO
+Female,45,Teacher,6.5,7,45,Overweight,135/90,65,6000,Insomnia,ESTRES_MODERADO
+Female,37,Accountant,7.2,8,60,Normal,115/75,68,7000,None,ESTRES_MODERADO
+Female,36,Accountant,7.1,8,60,Normal,115/75,68,7000,None,ESTRES_MODERADO
+Male,43,Engineer,7.7,8,90,Normal,130/85,70,8000,None,ESTRES_MODERADO
+Female,44,Teacher,6.6,7,45,Overweight,135/90,65,6000,Insomnia,ESTRES_MODERADO
+Female,43,Teacher,6.7,7,45,Overweight,135/90,65,6000,Insomnia,ESTRES_MODERADO
+Male,32,Doctor,6.2,6,30,Normal,125/80,72,5000,None,ESTRESADO
+Male,42,Lawyer,7.8,8,90,Normal,130/85,70,8000,None,ESTRES_MODERADO
+Female,53,Engineer,8.5,9,30,Normal,125/80,65,5000,None,ESTRES_MODERADO
+Female,50,Nurse,6.0,6,90,Overweight,140/95,75,10000,Sleep Apnea,ESTRESADO
+Female,50,Nurse,6.0,6,90,Overweight,140/95,75,10000,Sleep Apnea,ESTRESADO
+Female,49,Nurse,6.2,6,90,Overweight,140/95,75,10000,None,ESTRESADO
+Male,37,Engineer,7.8,8,70,Normal Weight,120/80,68,7000,None,ESTRES_MODERADO
+Female,45,Teacher,6.5,7,45,Overweight,135/90,65,6000,Insomnia,ESTRES_MODERADO
+Male,44,Salesperson,6.3,6,45,Overweight,130/85,72,6000,Insomnia,ESTRESADO
+Female,50,Nurse,6.0,6,90,Overweight,140/95,75,10000,Sleep Apnea,ESTRESADO
+Male,38,Lawyer,7.1,8,60,Normal,130/85,68,8000,Sleep Apnea,ESTRES_MODERADO
+Male,42,Salesperson,6.5,6,45,Overweight,130/85,72,6000,Insomnia,ESTRESADO
+Female,45,Teacher,6.6,7,45,Overweight,135/90,65,6000,None,ESTRES_MODERADO
+Male,32,Doctor,6.2,6,30,Normal,125/80,72,5000,None,ESTRESADO
+Female,52,Accountant,6.6,7,45,Overweight,130/85,72,6000,Insomnia,ESTRESADO
+Male,32,Doctor,7.7,7,75,Normal,120/80,70,8000,None,ESTRES_MODERADO
