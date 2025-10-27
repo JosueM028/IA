@@ -1,0 +1,26 @@
+=== RESUMEN EDA SEGURO MEDICO ===
+
+DATASET ORIGINAL:
+- Registros: 1338
+- Caracteristicas: 7
+- Valores faltantes: 0
+
+DESPUES DE FILTRADO (IQR k=1.5):
+- Registros: 1199
+- Outliers removidos: 139
+- Porcentaje eliminado: 10.39%
+
+SPLIT FINAL:
+- Train: 959 registros (80%)
+- Test: 240 registros (20%)
+
+VARIABLES NUMERICAS:
+- age: rango 18-64 años
+- bmi: rango 15.96-53.13
+- charges: rango 1121.87 - 34472.84
+
+VARIABLES CATEGORICAS:
+- sex: male, female
+- smoker: yes (fumadores), no
+- region: southwest, southeast, northwest, northeast
+- children: 0 a 5 hijos

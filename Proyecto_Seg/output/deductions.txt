@@ -1,0 +1,19 @@
+=== DEDUCCIONES DEL EDA ===
+
+UNIVARIANTE:
+- charges es fuertemente sesgada a la derecha (outliers en costos altos)
+- smoker tiene desequilibrio: 20% fuma, 80% no fuma
+- edad distribuida uniformemente (18-64 años)
+- region uniforme entre 4 categorias
+
+BIVARIANTE:
+- Fumadores pagan 3-4x mas que no fumadores (VARIABLE MAS IMPORTANTE)
+- age: correlacion fuerte (0.60) - relacion cuadratica
+- bmi: correlacion moderada (0.41)
+- sex y region: correlaciones muy debiles (<0.1)
+- children: correlacion casi nula (-0.08)
+
+ACCIONES TOMADAS:
+- Eliminados 139 outliers por IQR
+- Aplicada transformacion logaritmica a charges
+- Split 80/20 estratificado por charges

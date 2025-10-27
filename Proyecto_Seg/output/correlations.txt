@@ -1,0 +1,7 @@
+=== CORRELACIONES CON CHARGES (VARIABLE OBJETIVO) ===
+
+charges: 1.0000
+log_charges: 0.9127
+age: 0.4376
+children: 0.0837
+bmi: -0.0665
